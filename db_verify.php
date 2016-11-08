@@ -31,8 +31,8 @@ if (mysqli_connect_errno())
     mysqli_query($con, $sql);
     $sendtext = "Your verification code is $check_no";
     $home = file_get_contents('https://api.clickatell.com/http/sendmsg?user=Leedsysusa&password=abcASDF2345%23%23&api_id=3632862&to='.$phonenm.'&text=Your%20verification%20code%20is%20'.$check_no);
-    echo $home; 
-    echo $check_no;  
+    //echo $home; 
+    //echo $check_no;  
 	
 //}
  
