@@ -1,8 +1,8 @@
 ﻿<?php
 
 // Create connection
-$con = mysqli_connect("localhost", "root", "apmsetup", "asterisk");
- 
+//$con = mysqli_connect("localhost", "root", "apmsetup", "asterisk");
+  require_once 'db_config.php';
 // Check connection
 if (mysqli_connect_errno())
 {
