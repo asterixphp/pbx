@@ -1,7 +1,6 @@
 <?php
 
 // Create connection
-$con = mysqli_connect("localhost", "star", "star", "asterisk");
+$con = mysqli_connect("localhost", "root", "", "asteriskrealtime");
 
 ?>
-
