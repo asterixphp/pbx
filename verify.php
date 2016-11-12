@@ -7,7 +7,7 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
 
-    $phonenumber    = $_REQUEST['phonenumber'];
+    $phonenumber    = preg_replace('/\D/', '', $_REQUEST['phonenumber'] );
     $username       = $_REQUEST['username'];
 
     $check_sql      = "SELECT * from  cs_user where phoneno='$phonenumber' ";

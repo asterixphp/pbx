@@ -8,7 +8,7 @@
     }
 
     $verify_code    = $_REQUEST['verify_code'];
-    $phonenumber    = $_REQUEST['phonenumber'];
+    $phonenumber    = preg_replace('/\D/', '', $_REQUEST['phonenumber'] );
     //function db_insert($verify_code)
     //{
 
