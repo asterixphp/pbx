@@ -1,0 +1,37 @@
+﻿android 에서 다른 application들을 죽이기는 
+
+stackoverflow에서 주소:http://stackoverflow.com/questions/12036895/kill-another-application-on-android
+mainfest 에 
+<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+<uses-permission android:name="android.permission.GET_TASKS" />
+을 추가한다음에 
+
+Button runningApp = (Button) findViewById(R.id.runningApp);
+runningApp.setOnClickListener(new View.OnClickListener()
+{
+    @Override
+    public void onClick(View v)
+    {
+        String nameOfProcess = "com.example.filepath";
+        ActivityManager  manager = (ActivityManager)ApplicationActivity.this.getSystemService(Context.ACTIVITY_SERVICE);
+        List<ActivityManager.RunningAppProcessInfo> listOfProcesses = manager.getRunningAppProcesses();
+        for (ActivityManager.RunningAppProcessInfo process : listOfProcesses)
+        {
+            if (process.processName.contains(nameOfProcess))
+            {
+                Log.e("Proccess" , process.processName + " : " + process.pid);
+                android.os.Process.killProcess(process.pid);
+                android.os.Process.sendSignal(process.pid, android.os.Process.SIGNAL_KILL);
+                manager.killBackgroundProcesses(process.processName);
+                break;
+            }
+        }
+    }
+});
+
+Permission추가는 아래와 같이한다
+pm.setApplicationEnabledSetting(packageName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, 0);
+pm.setApplicationEnabledSetting(packageName,PackageManager.COMPONENT_ENABLED_STATE_ENABLED, 0);
+
+  boot 기동할때 방법은 주소: 
+https://blogmobile.itude.com/2012/02/20/automatically-starting-an-android-application-on-boot/

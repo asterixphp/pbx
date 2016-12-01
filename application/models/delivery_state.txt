@@ -1,0 +1,4 @@
+0:unassigned
+1:delivered
+2:pending
+3:RTO

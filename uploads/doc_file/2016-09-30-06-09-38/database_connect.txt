@@ -1,0 +1,24 @@
+
+https://login.one.com/cp/wfm#loginTarget=filemanager.one.com
+ php ¼¿»õ
+
+
+user: wadee_h@hotmail.com
+pswd: JakKhaYun
+
+
+
+
+https://login.one.com/cp/ »ôµê±¨¼è ¼¿»õ
+login from this page:
+
+mysql :
+user: walhalabi_com
+pass: zKMZNNv6
+db_name:walhalabi_com
+
+98.126.89.134
+Slwgusjdgjffacebook
+
+::::::::::::::::::  facebook current error  :::::::::::::::::
+http://stackoverflow.com/questions/37063685/facebook-oauth-the-domain-of-this-url-isnt-included-in-the-apps-domain
